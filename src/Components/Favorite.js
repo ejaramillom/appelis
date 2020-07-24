@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 
-class Favorite extends React.Component {
+class Favorite extends Component {
   render() {
     return (
       <div className="shopping-list">
-        <h1>Shopping List for {this.props.name}</h1>
+        <h1>Mis favoritas</h1>
         <ul>
-          <li>Instagram</li>
-          <li>WhatsApp</li>
-          <li>Oculus</li>
+          <li>Dark</li>
         </ul>
       </div>
     );

@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 
-export const Playing = (props) => {
-  return (
-    <h1>Playing</h1>
-  )
+class Playing extends Component {
+  render() {
+    return (
+      <div className="shopping-list">
+        <h1>En reproducción</h1>
+        <ul>
+          <li>Instagram</li>
+        </ul>
+      </div>
+    );
+  }
 }
+
+export default Playing;

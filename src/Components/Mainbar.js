@@ -1,4 +1,6 @@
-import React, { Component, useState } from 'react';
+import React, {
+   useState
+ } from 'react';
 import {
   Collapse,
   Navbar,
@@ -15,16 +17,15 @@ import {
   Redirect,
   Link,
 } from "react-router-dom";
-import Top from "./Components/Top";
-import Favorite from "./Components/Favorite";
-import Playing from "./Components/Playing";
-import Popular from "./Components/Popular";
-import New from "./Components/New";
+import Top from "./Top";
+import Favorite from "./Favorite";
+import Playing from "./Playing";
+import Popular from "./Popular";
+import New from "./New";
 
-class Mainbar extends Component {
-  render() {
-    const [ collapsed, setCollapsed ] = useState( true );
-    const toggleNavbar = () => setCollapsed( !collapsed );
+const Mainbar = (props) => {
+  const [ collapsed, setCollapsed ] = useState( true );
+  const toggleNavbar = () => setCollapsed( !collapsed );
   return (
     <div>
       <Navbar color = "faded" light>
@@ -33,19 +34,19 @@ class Mainbar extends Component {
         <Collapse isOpen = { !collapsed } navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href = "#">Mejores puntuaciones</NavLink>
+              <NavLink href = "/">Mejores puntuaciones</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href = "#">Próximos estrenos</NavLink>
+              <NavLink href = "/new">Estrenos</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href = "#">Populares</NavLink>
+              <NavLink href = "/popular">Populares</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href = "#">En reproducción</NavLink>
+              <NavLink href = "/playing">En reproducción</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href = "#">Mis favoritas</NavLink>
+              <NavLink href = "favorite">Mis favoritas</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
@@ -61,7 +62,6 @@ class Mainbar extends Component {
       </Switch>
     </div>
   );
-}
 }
 
 export default Mainbar;
