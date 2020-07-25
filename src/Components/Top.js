@@ -25,10 +25,9 @@ constructor () {
   render() {
     console.log(this.state.topMovies);
     return (
-      <div className="shopping-list">
+      <div className="top">
         <h1>Mejores puntuaciones</h1>
         <ul>
-          <li>Pelis</li>
           {this.state.topMovies.map(element =>
             <li key = {element.title}>{element.title}</li>
           )}

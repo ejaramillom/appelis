@@ -46,7 +46,7 @@ const Mainbar = (props) => {
               <NavLink href = "/playing">En reproducción</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href = "favorite">Mis favoritas</NavLink>
+              <NavLink href = "/favorite">Mis favoritas</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
