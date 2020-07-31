@@ -22,6 +22,8 @@ import Favorite from "./Favorite";
 import Playing from "./Playing";
 import Popular from "./Popular";
 import New from "./New";
+import Login from "./Login";
+import Register from "./Register";
 
 const Mainbar = (props) => {
   const [ collapsed, setCollapsed ] = useState( true );
@@ -48,6 +50,12 @@ const Mainbar = (props) => {
             <NavItem>
               <NavLink href = "/favorite">Mis favoritas</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href = "/login">Ingresar</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href = "/favorite">Registrarse</NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
@@ -58,6 +66,8 @@ const Mainbar = (props) => {
         <Route path = "/popular" component = { Popular } />
         <Route path = "/playing" component = { Playing } />
         <Route path = "/favorite" component = { Favorite } />
+        <Route path = "/login" component = { Login } />
+        <Route path = "/register" component = { Register } />
         <Route path = "*" component = { NotFound } />
       </Switch>
     </div>
