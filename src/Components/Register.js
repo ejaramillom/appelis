@@ -13,7 +13,11 @@ import {
 class Register extends Component {
   render() {
     return (
-      <Form inline>
+      <Form>
+      <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+        <Label for="usename" className="mr-sm-2">Nombre</Label>
+        <Input type="username" name="username" id="username" placeholder="Escribe aqui tu nombre" />
+      </FormGroup>
       <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
         <Label for="email" className="mr-sm-2">Correo elecrónico</Label>
         <Input type="email" name="email" id="email" placeholder="Escribe aqui tu email" />

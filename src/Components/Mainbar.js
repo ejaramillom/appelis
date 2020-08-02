@@ -25,7 +25,7 @@ import New from "./New";
 import Login from "./Login";
 import Register from "./Register";
 
-const Mainbar = (props) => {
+const Mainbar = ( props ) => {
   const [ collapsed, setCollapsed ] = useState( true );
   const toggleNavbar = () => setCollapsed( !collapsed );
   return (
@@ -54,7 +54,7 @@ const Mainbar = (props) => {
               <NavLink href = "/login">Ingresar</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href = "/favorite">Registrarse</NavLink>
+              <NavLink href = "/register">Registrarse</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
