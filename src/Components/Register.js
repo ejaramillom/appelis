@@ -45,7 +45,7 @@ class Register extends Component {
     })
     .catch( err => {
       console.error( err );
-      alert( "Error logging in. Please, try again!")
+      alert( "Error registering. Please, try again!")
     })
   }
 
