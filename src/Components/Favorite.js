@@ -18,7 +18,7 @@ class Favorite extends Component {
   render() {
     console.log( this.state.favoriteMovies );
     return (
-      <div className="top">
+      <div className="favorite">
         <h1>Mis favoritas</h1>
         <ul>
           { this.state.favoriteMovies.map( element =>

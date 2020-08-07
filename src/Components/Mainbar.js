@@ -24,6 +24,7 @@ import Popular from "./Popular";
 import New from "./New";
 import Login from "./Login";
 import Register from "./Register";
+import withAuth from "./withAuth";
 
 const Mainbar = ( props ) => {
   const [ collapsed, setCollapsed ] = useState( true );
@@ -61,11 +62,11 @@ const Mainbar = ( props ) => {
       </Navbar>
 
       <Switch>
-        <Route exact path = "/" component = { Top } />
-        <Route path = "/new" component = { New } />
-        <Route path = "/popular" component = { Popular } />
-        <Route path = "/playing" component = { Playing } />
-        <Route path = "/favorite" component = { Favorite } />
+        <Route exact path = "/" component = { ( Top ) } />
+        <Route path = "/new" component = { ( New ) } />
+        <Route path = "/popular" component = { ( Popular ) } />
+        <Route path = "/playing" component = { ( Playing ) } />
+        <Route path = "/favorite" component = { withAuth( Favorite ) } />
         <Route path = "/login" component = { Login } />
         <Route path = "/register" component = { Register } />
         <Route path = "*" component = { NotFound } />
@@ -76,7 +77,7 @@ const Mainbar = ( props ) => {
 
 export default Mainbar;
 
-export const NotFound = (props) => {
+export const NotFound = ( props ) => {
   return (
     <h1>Pagina no encontrada</h1>
   )
