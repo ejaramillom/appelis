@@ -51,23 +51,23 @@ class Register extends Component {
 
   render() {
     return (
-      <div className="register">
+      <div className = "register">
         <h1>Registrarse</h1>
           <Form inline onSubmit = { this.onSubmit } >
-          <FormGroup className = "mb-2 mr-sm-2 mb-sm-0">
-            <Label for = "name" className = "mr-sm-2">Nombre</Label>
-            <Input type = "name" name = "name" id = "name" placeholder = "Escribe aqui tu nombre" value = { this.state.name } onChange = { this.handleInputChange } required/>
-          </FormGroup>
-          <FormGroup className = "mb-2 mr-sm-2 mb-sm-0">
-            <Label for = "email" className = "mr-sm-2">Correo elecrónico</Label>
-            <Input type = "email" name = "email" id = "email" placeholder = "Escribe aqui tu email" value = { this.state.email } onChange = { this.handleInputChange } required/>
-          </FormGroup>
-          <FormGroup className = "mb-2 mr-sm-2 mb-sm-0">
-            <Label for = "password" className = "mr-sm-2">Constraseña</Label>
-            <Input type = "password" name = "password" id = "password" placeholder = "No se la digas a nadie!" value = { this.state.password } onChange = { this.handleInputChange } required/>
-          </FormGroup>
-          <Button type = "submit" value = "submit" >Registrarse</Button>
-        </Form>
+            <FormGroup className = "mb-2 mr-sm-2 mb-sm-0">
+              <Label for = "name" className = "mr-sm-2">Nombre</Label>
+              <Input type = "name" name = "name" id = "name" placeholder = "Escribe aqui tu nombre" value = { this.state.name } onChange = { this.handleInputChange } required/>
+            </FormGroup>
+            <FormGroup className = "mb-2 mr-sm-2 mb-sm-0">
+              <Label for = "email" className = "mr-sm-2">Correo elecrónico</Label>
+              <Input type = "email" name = "email" id = "email" placeholder = "Escribe aqui tu email" value = { this.state.email } onChange = { this.handleInputChange } required/>
+            </FormGroup>
+            <FormGroup className = "mb-2 mr-sm-2 mb-sm-0">
+              <Label for = "password" className = "mr-sm-2">Constraseña</Label>
+              <Input type = "password" name = "password" id = "password" placeholder = "No se la digas a nadie!" value = { this.state.password } onChange = { this.handleInputChange } required/>
+            </FormGroup>
+            <Button type = "submit" value = "submit" >Registrarse</Button>
+          </Form>
       </div>
     );
   }
